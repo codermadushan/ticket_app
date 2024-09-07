@@ -19,25 +19,22 @@ class DoubleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(_bigText, style: StyleRes.headLineStyle2),
-          InkWell(
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: _onPressed,
-            child: Text(
-              _smallText,
-              style: StyleRes.textStyle.copyWith(
-                color: ColorRes.primaryColor,
-              ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(_bigText, style: StyleRes.headLineStyle2),
+        InkWell(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: _onPressed,
+          child: Text(
+            _smallText,
+            style: StyleRes.textStyle.copyWith(
+              color: ColorRes.primaryColor,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

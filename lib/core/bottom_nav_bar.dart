@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'res/color_res.dart';
 import '../screens/home.dart';
+import '../screens/search.dart';
+import '../screens/ticket_view.dart';
 import '../providers/screen_index_provider.dart';
 
 class BottomNavBar extends ConsumerStatefulWidget {
@@ -15,8 +17,8 @@ class BottomNavBar extends ConsumerStatefulWidget {
 class _BottomNavBarState extends ConsumerState<BottomNavBar> {
   final screens = const [
     Home(),
-    Center(child: Text('Search')),
-    Center(child: Text('Tickets')),
+    Search(),
+    TicketView(),
     Center(child: Text('Profile')),
   ];
 

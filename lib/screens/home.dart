@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
 
             //
             Padding(
@@ -78,10 +78,13 @@ class Home extends StatelessWidget {
             const SizedBox(height: 40),
 
             //
-            DoubleText(
-              bigText: 'Upcoming Flights',
-              smallText: 'View all',
-              onPressed: () => _navigateToAllTickets(context),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: DoubleText(
+                bigText: 'Upcoming Flights',
+                smallText: 'View all',
+                onPressed: () => _navigateToAllTickets(context),
+              ),
             ),
 
             //
@@ -110,10 +113,13 @@ class Home extends StatelessWidget {
             const SizedBox(height: 40),
 
             //
-            DoubleText(
-              bigText: 'Hotels',
-              smallText: 'View all',
-              onPressed: () {},
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: DoubleText(
+                bigText: 'Hotels',
+                smallText: 'View all',
+                onPressed: () {},
+              ),
             ),
 
             //
@@ -139,7 +145,7 @@ class Home extends StatelessWidget {
             ),
 
             //
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
           ],
         ),
       ),
