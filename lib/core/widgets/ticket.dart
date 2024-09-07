@@ -41,12 +41,16 @@ class Ticket extends StatelessWidget {
                           StyleRes.headLineStyle3.copyWith(color: Colors.white),
                     ),
                     const Spacer(),
-                    const BigDot(),
+                    const BigDot(color: Colors.white),
                     const Expanded(
                       child: Stack(
                         alignment: AlignmentDirectional.center,
                         children: [
-                          DynamicDashedLine(dashWidth: 3, dashHeight: 1),
+                          DynamicDashedLine(
+                            dashWidth: 3,
+                            dashHeight: 1,
+                            dashColor: Colors.white,
+                          ),
                           RotatedBox(
                             quarterTurns: 1,
                             child: Icon(
@@ -57,7 +61,7 @@ class Ticket extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const BigDot(),
+                    const BigDot(color: Colors.white),
                     const Spacer(),
                     Text(
                       _ticketDataMap['to']['code'],
@@ -127,6 +131,7 @@ class Ticket extends StatelessWidget {
                   child: DynamicDashedLine(
                     dashWidth: 6,
                     dashHeight: 2,
+                    dashColor: Colors.white,
                   ),
                 ),
 
