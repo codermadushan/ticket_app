@@ -43,6 +43,7 @@ class _TicketViewState extends State<TicketView>
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: ColorRes.bgColor,
       appBar: AppBar(
         title: const Text(
           'Tickets',
@@ -50,6 +51,7 @@ class _TicketViewState extends State<TicketView>
           style: StyleRes.headLineStyle1,
         ),
         centerTitle: true,
+        backgroundColor: ColorRes.bgColor,
       ),
       body: SingleChildScrollView(
         child: Padding(

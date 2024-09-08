@@ -23,9 +23,7 @@ class DoubleText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(_bigText, style: StyleRes.headLineStyle2),
-        InkWell(
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
+        GestureDetector(
           onTap: _onPressed,
           child: Text(
             _smallText,

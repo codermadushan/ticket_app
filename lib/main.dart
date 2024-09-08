@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/bottom_nav_bar.dart';
 import 'core/utils/app_route.dart';
 import 'screens/all_tickets.dart';
+import 'screens/all_hotels.dart';
+import 'screens/hotel_detail.dart';
 import 'screens/ticket_view.dart';
 
 void main() {
@@ -22,7 +24,9 @@ class TicketApp extends StatelessWidget {
       routes: {
         AppRoute.home: (context) => const BottomNavBar(),
         AppRoute.allTickets: (context) => const AllTickets(),
+        AppRoute.allHotels: (context) => const AllHotels(),
         AppRoute.ticketView: (context) => const TicketView(),
+        AppRoute.hotelDetail: (context) => const HotelDetail(),
       },
     );
   }

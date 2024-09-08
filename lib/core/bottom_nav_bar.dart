@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'res/color_res.dart';
+import '../providers/screen_index_provider.dart';
 import '../screens/home.dart';
 import '../screens/search.dart';
 import '../screens/ticket_view.dart';
-import '../providers/screen_index_provider.dart';
+import '../screens/profile.dart';
 
 class BottomNavBar extends ConsumerStatefulWidget {
   const BottomNavBar({super.key});
@@ -19,7 +20,7 @@ class _BottomNavBarState extends ConsumerState<BottomNavBar> {
     Home(),
     Search(),
     TicketView(),
-    Center(child: Text('Profile')),
+    Profile(),
   ];
 
   void _setScreenIndex(int index) {

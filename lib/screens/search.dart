@@ -155,7 +155,7 @@ class _SearchState extends State<Search> with SingleTickerProviderStateMixin {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   image: const DecorationImage(
-                                    image: AssetImage(MediaRes.poolView),
+                                    image: AssetImage(MediaRes.planeSit),
                                     fit: BoxFit.cover,
                                   ),
                                 ),

@@ -16,6 +16,24 @@ class Home extends StatelessWidget {
     Navigator.of(context).pushNamed(AppRoute.allTickets);
   }
 
+  void _navigateToAllHotels(BuildContext context) {
+    Navigator.of(context).pushNamed(AppRoute.allHotels);
+  }
+
+  void _navigateToTicketView(BuildContext context, int index) {
+    Navigator.of(context).pushNamed(
+      AppRoute.ticketView,
+      arguments: {'index': index},
+    );
+  }
+
+  void _navigateToHotelDetail(BuildContext context, int index) {
+    Navigator.of(context).pushNamed(
+      AppRoute.hotelDetail,
+      arguments: {'index': index},
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -102,7 +120,10 @@ class Home extends StatelessWidget {
                         left: index == 0 ? 20 : 0,
                         right: 20,
                       ),
-                      child: Ticket(ticketList[index]),
+                      child: GestureDetector(
+                        onTap: () => _navigateToTicketView(context, index),
+                        child: Ticket(ticketList[index]),
+                      ),
                     );
                   },
                 ),
@@ -118,7 +139,7 @@ class Home extends StatelessWidget {
               child: DoubleText(
                 bigText: 'Hotels',
                 smallText: 'View all',
-                onPressed: () {},
+                onPressed: () => _navigateToAllHotels(context),
               ),
             ),
 
@@ -137,7 +158,10 @@ class Home extends StatelessWidget {
                         left: index == 0 ? 20 : 0,
                         right: 20,
                       ),
-                      child: Hotel(hotelList[index]),
+                      child: GestureDetector(
+                        onTap: () => _navigateToHotelDetail(context, index),
+                        child: Hotel(hotelList[index]),
+                      ),
                     );
                   },
                 ),
